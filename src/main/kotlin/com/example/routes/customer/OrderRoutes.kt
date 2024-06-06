@@ -1,4 +1,4 @@
-package com.example.routes
+package com.example.routes.customer
 
 import com.example.models.orderStorage
 import io.ktor.http.*
@@ -36,7 +36,9 @@ fun Route.totalizeOrderRoute() {
             "Not found",
             status = HttpStatusCode.NotFound
         )
-        val total = order.contents.sumOf { it.price * it.amount }
+        val total = order.contents.sumOf {
+            it.price * it.amount
+        }
         call.respond(total)
     }
 }
