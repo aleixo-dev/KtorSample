@@ -1,6 +1,7 @@
 package com.example
 
 import com.example.plugins.*
+import com.example.repository.UserRepository
 import io.ktor.server.application.*
 import io.ktor.server.plugins.cors.routing.*
 
@@ -9,8 +10,11 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+
+    val userRepository = UserRepository()
+
     configureSerialization()
-    configureRouting()
+    configureRouting(userRepository)
 
     install(CORS) {
         anyHost()
