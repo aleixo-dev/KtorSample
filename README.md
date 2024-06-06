@@ -43,7 +43,8 @@ Siga as instruções abaixo para executar o projeto em seu ambiente local:
    Abra o seu navegador e digite o seguinte endereço:
 
    ```
-   http://localhost:8080
+   http://localhost:8080 - se estiver usando junto com o emulador do android studio,
+   mude para outra porta, ex: http://localhost:2222
    ```
 
    Agora você pode começar a utilizar a aplicação, criar, visualizar, atualizar e excluir usuários.
